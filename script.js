@@ -225,7 +225,7 @@ window.onload = () => {
     // Render saved cards.
     let renderSavedCards = () => {
         SavedCards.innerHTML = "";
-        const cards = JSON.parse(localStorage.savedCards);
+        const cards = JSON.parse(localStorage.savedCards || "[]");
         for (const [index, card] of cards.entries()) {
             SavedCards.innerHTML += getCardHTML(card.number, card.cvv, card.expiry, card.img, index);
         }

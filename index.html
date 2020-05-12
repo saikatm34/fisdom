@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Credit Card</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+        <form id="creditCard">
+            <div class="form row">
+              <div class="col-10">
+                <label for="CardNumber" class="text black padding-bottom-1"
+                  >Card Number</label
+                >
+                <input
+                  type="text"
+                  name="CardNumber"
+                  id="CardNumber"
+                  class="input border-round card-number"
+                  placeholder="0000-0000-0000-0000"
+                />
+              </div>
+              <div class="col-2 center">
+                <img id="CardImage" style="display: none;" src="" class="card-image" />
+              </div>
+            </div>
+            <div class="form row">
+              <div class="col-6">
+                <label for="CardExpiry" class="text black padding-bottom-1"
+                  >Expiration</label
+                >
+                <input
+                  type="text"
+                  id="CardExpiry"
+                  name="CardExpiry"
+                  class="input border-round w-90"
+                  placeholder="MM/YY"
+                  disabled=true
+                />
+              </div>
+              <div class="col-6">
+                <label for="CardCVV" class="text black padding-bottom-1">CVV</label>
+                <input
+                  type="password"
+                  id="CardCVV"
+                  name="CardCVV"
+                  class="input border-round w-90"
+                  placeholder="****"
+                  disabled=true
+                />
+              </div>
+            </div>
+            <div class="form">
+              <button type="button" id="BtnSubmit" class="btn">Save for Later</button>
+            </div>
+        </form>
+    </div>
+    <h3 style="text-align: center;">Saved Cards</h3>
+    <div id="SavedCards">
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
